@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Wrecking Doge - Miley Cyrus</title>
+	<link rel="icon" type="image/png" href="doge.png">
+	<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<style type="text/css">
+		body {
+			background-image: url('doge.png');
+		}
+
+		#container {
+			margin: 0 auto;
+			text-align: center;
+			width: 60%;
+		    -moz-animation: swing 3s infinite ease-in-out;
+		    -moz-transform-origin: center -200%;
+		    -webkit-animation:swing 3s infinite ease-in-out;
+		    -webkit-transform-origin: center -200%;
+		    animation: swing 3s infinite ease-in-out;
+		    transform-origin: center -200%;
+		}
+
+		@-moz-keyframes swing{
+		    0%{-moz-transform:rotate(-1.4deg)}
+		    50%{-moz-transform:rotate(1.4deg)}
+		    100%{-moz-transform:rotate(-1.4deg)}
+		}
+		@-webkit-keyframes swing{
+		    0%{-webkit-transform:rotate(-1.4deg)}
+		    50%{-webkit-transform:rotate(1.4deg)}
+		    100%{-webkit-transform:rotate(-1.4deg)}
+		}
+		@keyframes swing{
+		    0%{transform:rotate(-1.4deg)}
+		    50%{transform:rotate(1.4deg)}
+		    100%{transform:rotate(-1.4deg)}
+		}
+
+		@-moz-keyframes spin {
+		    from { -moz-transform: rotate(0deg); }
+		    to { -moz-transform: rotate(360deg); }
+		}
+		@-webkit-keyframes spin {
+		    from { -webkit-transform: rotate(0deg); }
+		    to { -webkit-transform: rotate(360deg); }
+		}
+		@keyframes spin {
+		    from {transform:rotate(0deg);}
+		    to {transform:rotate(360deg);}
+		}
+
+		@keyframes fly {
+			0%{transform:translateX(0vw)}
+		    50%{transform:translateX(90vw)}
+		    100%{transform:translateX(0vw)}
+		}
+		@-webkit-keyframes fly {
+			0%{-webkit-transform:translateX(0vw)}
+		    50%{-webkit-transform:translateX(90vw)}
+		    100%{-webkit-transform:translateX(0vw)}
+		}
+		@-moz-keyframes fly {
+			0%{-webkit-transform:translateX(0vw)}
+		    50%{-webkit-transform:translateX(90vw)}
+		    100%{-webkit-transform:translateX(0vw)}
+		}
+
+		#lyrics {
+			color: white;
+			font-family:'Roboto Condensed';
+			text-shadow: 0px 0px 3px black;
+		}
+
+		#title {
+			font-family:Playball;
+			text-align: center;
+			font-size: 50px;
+			color:rgba(255,255,255, .9);
+
+			text-shadow: 0px 0px 50px rgb(202,106,156),
+						 0px 0px 50px rgb(202,106,156),
+						 0px 0px 50px rgb(202,106,156),
+						 0px 0px 50px rgb(202,106,156),
+						 0px 0px 50px rgb(202,106,156),
+						 0px 0px 50px rgb(202,106,156),
+						 0px 0px 50px rgb(202,106,156);
+		}
+
+		#chain {
+			position:absolute;
+			width:3%;
+			left:49.5%;
+			top: -10%;
+			height:110%;
+			z-index: -1;
+			background-image: url("chain.png");
+			background-repeat: repeat-y;
+		}
+
+		#lyricsContainer {
+			display:block;
+			position:relative;
+		}
+
+		#swingingDoge {
+			position:absolute;
+			bottom:250px; right:33%;
+			width:100px; height:100px;
+		}
+
+		#flyingDoge {
+			position:absolute;
+			width:10vmin;
+			height:10vmin;
+			-moz-animation: fly 3s infinite ease-in-out;
+		    -webkit-animation: fly 3s infinite ease-in-out;
+		    animation: fly 3s infinite ease-in-out;
+		}
+
+		.doge {
+			position:fixed;
+			-moz-animation: spin 1s infinite linear;
+		    -moz-transform-origin: center center;
+		    -webkit-animation:spin 1s infinite linear;
+		    -webkit-transform-origin: center center;
+		    animation: spin 1s infinite linear;
+		    transform-origin: center center;
+		    width:10vmin;
+		    height:10vmin;
+		}
+
+		#leftDoge {
+			left:25%;
+		}
+
+		#rightDoge {
+			right:25%;
+		}
+
+		/* Signature styling */
+
+		#signature {
+			text-align: center;
+			color:#9D9;
+			font-style: italic;
+		}
+
+		#signature a:link {
+			color: #AEA;
+		}
+
+		#signature a:visited {
+			color: #7C7;
+		}
+
+		#signature a:hover {
+			color: #EFE;
+		}
+
+	</style>
+</head>
+<body>
+<img id="flyingDoge" src="doge.png">
+<img id="leftDoge" class="doge" src="doge.png">
+<img id="rightDoge" class="doge" src="doge.png">
+<div id="container">
+	<div id="lyricsContainer">
+		<div id="chain"> </div>
+		<div id="lyrics">
+			<span id="title">
+				Wrecking Doge
+			</span>
+
+			<br/>
+			We clawed, we chained our hearts in vain <br/>
+			We jumped never asking why<br/>
+			We kissed, I fell under your spell.<br/>
+			A love no one could deny<br/>
+			<br/>
+			Don't you ever say I just walked away<br/>
+			I will always want you<br/>
+			I can't live a lie, running for my life<br/>
+			I will always want you<br/>
+			<br/>
+			I came in like a wrecking ball<br/>
+			I never hit so hard in love<br/>
+			All I wanted was to break your walls<br/>
+			All you ever did was wreck me<br/>
+			Yeah, you, you wreck me<br/>
+			<br/>
+			I put you high up in the sky<br/>
+			And now, you're not coming down<br/>
+			It slowly turned, you let me burn<br/>
+			And now, we're ashes on the ground<br/>
+			<br/>
+			Don't you ever say I just walked away<br/>
+			I will always want you<br/>
+			I can't live a lie, running for my life<br/>
+			I will always want you<br/>
+			<br/>
+			I came in like a wrecking ball<br/>
+			I never hit so hard in love<br/>
+			All I wanted was to break your walls<br/>
+			All you ever did was wreck me<br/>
+			<br/>
+			I came in like a wrecking ball<br/>
+			Yeah, I just closed my eyes and swung<br/>
+			Left me crashing in a blazing fall<br/>
+			All you ever did was wreck me<br/>
+			Yeah, you, you wreck me<br/>
+			<br/>
+			I never meant to start a war<br/>
+			I just wanted you to let me in<br/>
+			And instead of using force<br/>
+			I guess I should've let you win<br/>
+			I never meant to start a war<br/>
+			I just wanted you to let me in<br/>
+			I guess I should've let you win<br/>
+			<br/>
+			Don't you ever say I just walked away<br/>
+			I will always want you<br/>
+			<br/>
+			I came in like a wrecking ball<br/>
+			I never hit so hard in love<br/>
+			All I wanted was to break your walls<br/>
+			All you ever did was wreck me<br/>
+			<br/>
+			I came in like a wrecking ball<br/>
+			Yeah, I just closed my eyes and swung<br/>
+			Left me crashing in a blazing fall<br/>
+			All you ever did was wreck me<br/>
+			Yeah, you, you wreck me<br/>
+			Yeah, you, you wreck me<br/>
+		</div>
+	</div>
+	<img src="miley.png">
+	<img class="doge" id="swingingDoge" src="doge.png">
+</div>
+
+
+<div id="signature">Ben Berman | <a href="mailto:ben.m.berman@gmail.com" title="ben.m.berman@gmail.com">ben.m.berman@gmail.com</a> | 
+								 <a href="http://jygabyte.com" title="jygabyte.com">website</a> | 
+								 <a href="http://facebook.com/myshka" title="myshka">facebook</a></div>
+</body>
+</html>
